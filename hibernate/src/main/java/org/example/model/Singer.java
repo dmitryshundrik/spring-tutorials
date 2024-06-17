@@ -3,24 +3,22 @@ package org.example.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.io.Serializable;
-
 @Entity
 @Table(name = "singer")
 @Data
-public class Singer implements Serializable {
+public class Singer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column(name = "ID")
     private Long id;
 
-    @Column(name = "name")
+    @Column(name = "NAME")
     private String name;
 
-    @Column(name = "lyric")
+    @Column(name = "LYRIC")
     private String lyric;
 
     @Version
-    @Column(name = "version")
+    @Column(name = "VERSION")
     private int version;
 }
